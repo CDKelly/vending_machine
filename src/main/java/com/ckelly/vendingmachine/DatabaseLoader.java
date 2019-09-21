@@ -25,6 +25,7 @@ public class DatabaseLoader implements CommandLineRunner {
         repository.save(new Slot("Pepsi", new BigDecimal("1.50"), 6, 10));
         repository.save(new Slot("Dr. Pepper", new BigDecimal("1.25"), 3, 10));
         
+        System.out.println("SEEDING DATABASE WITH SLOTS:");
         repository.findAll().forEach(System.out::println);
     }
 }

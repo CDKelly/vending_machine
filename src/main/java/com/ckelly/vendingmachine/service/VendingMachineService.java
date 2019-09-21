@@ -21,4 +21,6 @@ public interface VendingMachineService {
     public void decrementSlotQuantityByAmt(Slot slot, Integer amtToDecrement);
 
     public BigDecimal getChangeAmt(BigDecimal usersMoney, BigDecimal slotPrice);
+    
+    public String formatBigDecimal(BigDecimal bigDecimal);
 }
