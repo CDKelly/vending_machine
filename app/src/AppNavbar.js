@@ -26,7 +26,7 @@ export default class AppNavbar extends Component {
           <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href="https://github.com/CDKelly">
-                CDKelly
+                <p>CDKelly</p>
                 <img src={githubAvatar} className="github-avatar" alt="GitHub Avatar" />
               </NavLink>
             </NavItem>

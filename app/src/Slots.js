@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Button, Container, Table } from 'reactstrap';
 import AppNavbar from './AppNavbar';
+import TransactionForm from './TransactionForm';
+import DisplayMessage from './DisplayMessage';
 import { Link } from 'react-router-dom';
 
 class Slots extends Component {
-
   constructor(props) {
     super(props);
     this.state = {slots: [], isLoading: true};
@@ -49,10 +50,11 @@ class Slots extends Component {
       
       return (
           <td key={slot.id} className="align-middle">
+          <p>Id : {slot.id}</p>
           <p>{slot.productName}</p>
           <p>{formatter.format(slot.price)}</p>
           <p>Remaining: {slot.currentQuantity}</p>
-          </td>        
+          </td>
       );
     });
 
@@ -69,18 +71,18 @@ class Slots extends Component {
       });
 
       return rows;
-    }
+    }	  
 
     return (
         <div>
-          <Container fluid>
+          <AppNavbar/>
+          <Container fluid className="col-sm-6 col-md-7 col-lg-8 float-left">
             <Table hover className="mt-4">
               <thead>
                 <tr>
                   <th></th>
                   <th></th>
                   <th></th>
-                  <th rowSpan={slotCells.length/3}>This is a test</th>
                 </tr>
               </thead>
               <tbody>
@@ -88,6 +90,8 @@ class Slots extends Component {
               </tbody>
             </Table>
           </Container>
+          <TransactionForm/>
+          // <DisplayMessage/>
         </div>
     );
   }

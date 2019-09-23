@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Slots from './Slots';
-// import AppNavbar from './AppNavbar';
+import AppNavbar from './AppNavbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path='/' exact={true} component={Slots}/>
+          <Route path='/vendingmachine/slots' exact={true} component={Slots}/>
         </Switch>
       </Router>
     )
