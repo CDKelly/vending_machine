@@ -91,10 +91,11 @@ class Slots extends Component {
             </Table>
           </Container>
           <TransactionForm/>
-          // <DisplayMessage/>
         </div>
     );
   }
 }
 
 export default Slots;
+
+          // <DisplayMessage/>
