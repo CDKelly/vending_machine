@@ -4,13 +4,15 @@ import java.math.BigDecimal;
 
 import org.springframework.stereotype.Service;
 
-import com.ckelly.vendingmachine.model.Slot;
-import com.ckelly.vendingmachine.exception.NoSuchItemException;
-import com.ckelly.vendingmachine.exception.NoItemInventoryException;
 import com.ckelly.vendingmachine.exception.InsufficientFundsException;
+import com.ckelly.vendingmachine.exception.NoItemInventoryException;
+import com.ckelly.vendingmachine.exception.NoSuchItemException;
+import com.ckelly.vendingmachine.model.Slot;
 
 @Service
 public interface VendingMachineService {
+	public Iterable<Slot> getAllSlots();
+	
     public BigDecimal makeSelection(BigDecimal usersMoney, Long slotId) 
     		throws NoSuchItemException, NoItemInventoryException, InsufficientFundsException;
 

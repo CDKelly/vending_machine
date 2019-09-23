@@ -1,10 +1,10 @@
 package com.ckelly.vendingmachine.model;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import java.math.BigDecimal;
 
 @Entity
 public class Slot {
@@ -17,8 +17,9 @@ public class Slot {
     private Integer currentQuantity;
     private Integer maxQuantity;
     
-    public Slot(String productName, BigDecimal price, Integer currentQuantity, Integer maxQuantity) {
-        this.productName = productName;
+    public Slot(Long id, String productName, BigDecimal price, Integer currentQuantity, Integer maxQuantity) {
+        this.id = id;
+    	this.productName = productName;
         this.price = price;
         this.currentQuantity = currentQuantity;
         this.maxQuantity = maxQuantity;
