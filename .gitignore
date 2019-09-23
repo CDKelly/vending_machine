@@ -23,6 +23,7 @@ target/
 hs_err_pid*
 
 ### Eclipse ###
+eclipse-installer/
 .settings/
 .classpath
 .project
